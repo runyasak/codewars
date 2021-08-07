@@ -1,10 +1,3 @@
 def divisors(n)
-  result = []
-  for index in 1..n do
-    if index > 1 && index != n && n % index == 0
-      result << index
-    end
-  end
-
-  return result
+  return [*2..n - 1].select {|num| n % num == 0}
 end
